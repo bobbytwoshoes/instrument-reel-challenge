@@ -1,3 +1,92 @@
 /**
  * ✅ You can edit this file to add your own styles.
  */
+:root {
+  --reel-background: #20222D;
+  --reel-background-hover: #2B2D3A;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --reel-background: #e0e3ec;
+    --reel-background-hover: #f1f2f5;
+  }
+}
+
+.instrument-reel {
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  width: 100%;
+}
+
+.instrument-reel .loading {
+  text-align: center;
+  padding: 12px;
+}
+
+.instrument-reel ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.instrument-reel li {
+  border-right: 1px solid var(--border-color);
+  padding: 12px;
+  font-size: 14px;
+  min-width: 255px;
+  display: flex;
+  justify-content: space-around;
+  background-color:  var(--reel-background);
+}
+
+.instrument-reel li:hover {
+  background-color:  var(--reel-background-hover);
+}
+
+
+.instrument-reel span {
+  padding: 0 6px;
+}
+
+.instrument-name {
+  font-weight: bold;
+}
+
+.instrument-logo {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+}
+
+.instrument-logo-group {
+  position: relative;
+}
+
+.instrument-logo-group  .instrument-logo {
+  width: 14px;
+  height: 14px;
+}
+
+.instrument-logo-group  .instrument-logo:last-of-type{
+  z-index: 1;
+  transform: translate(-40%, -30%);
+}
+
+.instrument-quote, 
+.instrument-percentage {
+  font-variant-numeric: tabular-nums;
+}
+
+.instrument.price-increase .instrument-quote, 
+.instrument.price-increase .instrument-percentage {
+  color: green;
+}
+
+.instrument.price-decrease .instrument-quote, 
+.instrument.price-decrease .instrument-percentage {
+  color: red;
+}
